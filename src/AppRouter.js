@@ -13,7 +13,7 @@ function AppRouter() {
     <Router>
       <Routes>
         <Route path="/" element={<UsernameForm />} />
-        <Route path="/question" component={QuestionForm} />
+        <Route path="/questionForm" component={QuestionForm} />
         {/* Add other routes for different pages */}
         <Route path="/result" element={<Result />} />
       </Routes>
