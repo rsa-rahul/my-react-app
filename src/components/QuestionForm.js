@@ -1,5 +1,6 @@
 // QuestionForm.js
 import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 
 function QuestionForm() {
   const [answer, setAnswer] = useState('');
@@ -12,6 +13,7 @@ function QuestionForm() {
     e.preventDefault();
     // Do something with the user's answer, e.g., submit it to an API or store it in state.
     console.log(`User's answer: ${answer}`);
+    Navigate("/Result");
   };
 
   return (
