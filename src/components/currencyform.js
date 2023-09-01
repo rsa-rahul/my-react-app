@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Navigate, useHistory } from 'react-router-dom';
+import ExcelReader from './data/excelFileReader';
 import FailedPage from './FailedPage';
 
 function customShuffleArray(array) {
@@ -14,6 +15,7 @@ function CurrencyForm() {
     const validCurrencies = ['Euro', 'Dollar', 'Inr', 'Peso', 'Dirham'];
     const inValidCurrencies = ['EUR', 'IND', 'USA', 'afghanistan'];
 
+    // inValidCurrencies = ExcelReader(6);
     const validCurrenciesWithIdentifier = validCurrencies.map(word => [word, "valid"]);
     const invalidCurrenciesWithIdentifier = inValidCurrencies.map(word => [word, "invalid"]);
     const allWords = [
@@ -27,7 +29,7 @@ function CurrencyForm() {
     const handleInCorrectWordClick = (word) => {
         Navigate("/failedpage");
     }
-    const wordToLinkRenderer = (wordArray, index) => {
+    const wordToElementRenderer = (wordArray, index) => {
         let word = wordArray[0];
         let isValid = wordArray[1];
         if(isValid==="valid"){
@@ -40,7 +42,9 @@ function CurrencyForm() {
     return (
         <div>
             <h2>Select a valid currency</h2>
-            {shuffledWords.map(wordToLinkRenderer)}
+            <marquee>
+            {shuffledWords.map(wordToElementRenderer)}
+            </marquee>
         </div>
     );
 }

@@ -42,7 +42,8 @@ function Username() {
         <label>
           First Name:
           <input
-            type="text"
+            type="text" 
+            placeholder="Enter your name"
             value={username}
             onChange={handleUsernameChange}
           />
@@ -52,6 +53,7 @@ function Username() {
           Last name:  
           <input
             type="text"
+            placeholder="Enter your name"
             value={lastname}
             onChange={handleLastChange}
           />
@@ -61,6 +63,7 @@ function Username() {
           Business Email:
           <input
             type="text"
+            placeholder="Enter your name"
             value={businessEmail}
             onChange={handleBusinessChange}
           />
@@ -70,11 +73,12 @@ function Username() {
           Mobile Number:
           <input
             type="text"
+            placeholder="Enter your number"
             value={mobile}
             onChange={handleMobileChange}
           />
         </label><br/>
-        <button type="submit">I'm Ready to begin</button> // handle submit set in button property type
+        <button type="submit">I'm Ready to begin</button>
       </form>
     </div>
   );
