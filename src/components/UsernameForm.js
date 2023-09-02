@@ -40,40 +40,40 @@ function Username() {
       <h1>Fill in your details and let's find out!</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          First Name:
+          
           <input
             type="text" 
-            placeholder="Enter your name"
+            placeholder="First Name*"
+            required
             value={username}
             onChange={handleUsernameChange}
           />
         </label>
         {/*<button type="submit">Submit</button>*/}
         <label><br/>
-          Last name:  
+            
           <input
             type="text"
-            placeholder="Enter your name"
+            placeholder="Last name*"
             value={lastname}
             onChange={handleLastChange}
           />
         </label>
         {/*<button type="submit">Submit</button>*/}
         <label><br/>
-          Business Email:
+          
           <input
             type="text"
-            placeholder="Enter your name"
+            placeholder="Business Email*"
             value={businessEmail}
             onChange={handleBusinessChange}
           />
         </label>
         {/*<button type="submit">Submit</button>*/}
         <label><br/>
-          Mobile Number:
           <input
             type="text"
-            placeholder="Enter your number"
+            placeholder="Mobile no.(Optional)"
             value={mobile}
             onChange={handleMobileChange}
           />

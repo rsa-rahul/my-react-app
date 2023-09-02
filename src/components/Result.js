@@ -6,6 +6,7 @@ function Result() {
     <div>
       <h1>Result</h1>
       {/* Display the result here */}
+      correct!Thanks for playing.
     </div>
   );
 }
