@@ -1,16 +1,17 @@
 // Username.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-function Username() {
-  const [username, setUsername] = useState('');
+function Firstname() {
+  const [firstName, setFirstname] = useState('');
   const navigate = useNavigate();
 
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
+  const handleFirstnameChange = (e) => {
+    setFirstname(e.target.value);
   };
 
-  const [lastname, setLastname] = useState('');
+  const [lastName, setLastname] = useState('');
 
   const handleLastChange = (e) => {
     setLastname(e.target.value);
@@ -30,8 +31,22 @@ function Username() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Do something with the user's username, e.g., store it in state or send it to an API.
-    console.log(`User's username: ${username}`);
+
+      let userData = {
+        firstName,
+        lastName,
+        businessEmail,
+        mobile
+      }
+      axios.post('http://localhost:5001/api/users', userData)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error('Error fetching Excel data:', error);
+        throw error;
+      });
+
     navigate('/questionForm');
   };
 
@@ -40,28 +55,28 @@ function Username() {
       <h1>Fill in your details and let's find out!</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          
+
           <input
-            type="text" 
+            type="text"
             placeholder="First Name*"
             required
-            value={username}
-            onChange={handleUsernameChange}
+            value={firstName}
+            onChange={handleFirstnameChange}
           />
         </label>
         {/*<button type="submit">Submit</button>*/}
-        <label><br/>
-            
+        <label><br />
+
           <input
             type="text"
             placeholder="Last name*"
-            value={lastname}
+            value={lastName}
             onChange={handleLastChange}
           />
         </label>
         {/*<button type="submit">Submit</button>*/}
-        <label><br/>
-          
+        <label><br />
+
           <input
             type="text"
             placeholder="Business Email*"
@@ -70,19 +85,19 @@ function Username() {
           />
         </label>
         {/*<button type="submit">Submit</button>*/}
-        <label><br/>
+        <label><br />
           <input
             type="text"
             placeholder="Mobile no.(Optional)"
             value={mobile}
             onChange={handleMobileChange}
           />
-        </label><br/>
+        </label><br />
         <button type="submit">I'm Ready to begin</button>
       </form>
     </div>
   );
 }
 
-export default Username; 
+export default Firstname;
 
