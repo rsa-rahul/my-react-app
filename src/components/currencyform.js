@@ -30,13 +30,26 @@ function CurrencyForm() {
             return <Link className="custom-link" to="/failedpage" >{word} </Link>
         }
     }
-    console.log("Before returning");
+    function chunkArray(arr, chunkSize) {
+        const chunkedArray = [];
+        for (let i = 0; i < arr.length; i += chunkSize) {
+            const chunk = arr.slice(i, i + chunkSize);
+            chunkedArray.push(chunk);
+        }
+        return chunkedArray;
+    }
+
+    function getMarqueeForWords(words, orientationIndex) {
+        let direction = (orientationIndex %2==0)? "left":  "right";
+        return <marquee direction={direction}>
+            {words.map(wordToElementRenderer)}
+        </marquee>
+    }
     return (
         <div>
             <h2>Select a valid currency</h2>
-            <marquee>
-                {shuffledCurrencies.map(wordToElementRenderer)}
-            </marquee>
+            <div>{chunkArray(shuffledCurrencies, 20).map((words,index) => getMarqueeForWords(words, index))}
+            </div>
         </div>
     );
 }
