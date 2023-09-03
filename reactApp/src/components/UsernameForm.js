@@ -70,6 +70,7 @@ function Firstname() {
           <input
             type="text"
             placeholder="Last name*"
+            required
             value={lastName}
             onChange={handleLastChange}
           />
@@ -80,6 +81,7 @@ function Firstname() {
           <input
             type="text"
             placeholder="Business Email*"
+            required
             value={businessEmail}
             onChange={handleBusinessChange}
           />
