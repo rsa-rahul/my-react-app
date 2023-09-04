@@ -32,13 +32,13 @@ function Firstname() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-      let userData = {
-        firstName,
-        lastName,
-        businessEmail,
-        mobile
-      }
-      axios.post('http://localhost:5001/api/users', userData)
+    let userData = {
+      firstName,
+      lastName,
+      businessEmail,
+      mobile
+    }
+    axios.post('http://localhost:5001/api/users', userData)
       .then((response) => {
         console.log(response.data);
       })
@@ -47,57 +47,69 @@ function Firstname() {
         throw error;
       });
 
-    navigate('/questionForm');
+    navigate('/AfterUsername');
   };
 
   return (
-    <div>
-      <h1>Fill in your details and let's find out!</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
+    <section>
+      <div className='username1'>
+        <h1>Fill in your details and let's find out!</h1>
+        <form onSubmit={handleSubmit}>
+        <div className='username3'>
+        <span>
+            <label className='username2'>
+              <input className='username4'
+                type="text"
+                placeholder="First Name*"
+                required
+                value={firstName}
+                onChange={handleFirstnameChange}
+              />
+            </label>
+          </span>
+          <span>
+            <label className='username2'>
+              <input className='username4'
+                border-radius="40px"
+                type="text"
+                placeholder="Last name*"
+                required
+                value={lastName}
+                onChange={handleLastChange}
+              />
+            </label>
+            </span>
+          <span>
+          <label className='username2'><br />
 
-          <input
-            type="text"
-            placeholder="First Name*"
-            required
-            value={firstName}
-            onChange={handleFirstnameChange}
-          />
-        </label>
-        {/*<button type="submit">Submit</button>*/}
-        <label><br />
-
-          <input
-            type="text"
-            placeholder="Last name*"
-            required
-            value={lastName}
-            onChange={handleLastChange}
-          />
-        </label>
-        {/*<button type="submit">Submit</button>*/}
-        <label><br />
-
-          <input
-            type="text"
-            placeholder="Business Email*"
-            required
-            value={businessEmail}
-            onChange={handleBusinessChange}
-          />
-        </label>
-        {/*<button type="submit">Submit</button>*/}
-        <label><br />
-          <input
-            type="text"
-            placeholder="Mobile no.(Optional)"
-            value={mobile}
-            onChange={handleMobileChange}
-          />
-        </label><br />
-        <button type="submit">I'm Ready to begin</button>
-      </form>
-    </div>
+            <input className='username4'
+              type="text"
+              placeholder="Business Email*"
+              required
+              value={businessEmail}
+              onChange={handleBusinessChange}
+            />
+          </label>
+          </span>
+          <span>
+          <label className='username2'>
+            <input className='username4'
+              type="text"
+              placeholder="Mobile no.(Optional)"
+              value={mobile}
+              onChange={handleMobileChange}
+            />
+          </label><br />
+          
+          </span>
+          </div>
+          <div>
+          <br />
+          <button type="submit">I'm Ready to begin</button>
+          </div>
+        </form>
+      </div>
+    </section>
   );
 }
 
