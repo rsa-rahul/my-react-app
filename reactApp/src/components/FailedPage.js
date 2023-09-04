@@ -1,35 +1,44 @@
 // Result.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ThankYou from './ThankYou';
+
 function FailedPage() {
   return (
-    <div >
-      <div className='container'>
+    <div  className='container'>
       <div>
-        <box>
+        <div>
           <h1 className='f1'>EUR</h1>
-        </box>
-        <h3>We've got it covered</h3>
-      </div>
-      <div>
-        <span>Country</span> <span>Receive Coverage</span> <span>Penetration Coverage</span>
-      </div>
-      <div>
-        <span>Aland Islands</span> <span>All Banks</span> <span>100%</span>
-      </div><br/>
-      <div>
-        Delivery Time
-        <br/>
-        Some day deliveries
-      </div>
-      <div>
-        <div><br/>
-          You've Got 2 more attempts left
-        </div>
-        </div>
+          <h3>We've got it covered</h3>
         </div>
         <div>
+          <table>
+            <thead id='f11'>
+              <tr>
+                <th>Country</th>
+                <th>Receive Coverage</th>
+                <th>Penetration Coverage</th>
+              </tr>
+            </thead>
+            <tbody id='f12'>
+              <tr>
+                <td>Aland Islands</td>
+                <td>All Banks</td>
+                <td>100%</td>
+              </tr>
+            </tbody>
+          </table>
+          <div className='f13'>
+            <h3>Delivery Time</h3>
+            Same day deliveries
+          </div>
+        </div>
+        <div className='f14'>
+          <br />
+          You've Got<span id='f114'> 2 more attempts</span> left 
+        </div>
+        <br/>
+      </div>
+      <div className='f15'>
         <span>
           <button type="submit"><Link to='/CurrencyForm'>Try Again</Link></button>
         </span>

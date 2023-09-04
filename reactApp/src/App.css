@@ -144,8 +144,109 @@ button[type="submit"]:hover {
   font-weight: 600;
   line-height: normal;
 }
-.f1{
+
+.qf1{
+  background: #233671;
+  width: 1460px;
+height: 1080px;
+text-align: center;
+}
+.qf2{
+  color: #EB5E57;
+font-family: TT Firs Neue Trial Var Roman;
+font-size: 60px;
+font-style: normal;
+font-weight: 200;
+line-height: normal;
+}
+.qf3{
+  color: #FFF;
+text-align: center;
+font-family: TT Firs Neue;
+font-size: 56px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.qf4{
+  
+  width: 1400px;
+height: 600px;
+flex-shrink: 0;
+}
+.cf1{
+  background: #8493c3;
+  margin: 0px auto;
+min-height: 800px;
+position: relative;
+width: 1400px;
+  display: inline-flex;
+padding: 41px 0px 42px 38px;
+justify-content: flex-end;
+align-items: center;
+
+}
+.cf2{
   padding: 5px;
+  color: #b8c4e0;
+  font-family: TT Firs Neue;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.res1{
+  display: flex;
+width: 1200px;
+height: 412px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+}
+.res1 h1{
+  width: 579px;
+height: 106px;
+flex-shrink: 0;
+color: #FFF;
+font-family: TT Firs Neue;
+font-size: 96px;
+font-style: normal;
+font-weight: 600;
+line-height: 107%; /* 102.72px */
+}
+.res2{
+  background: #233671;
+  width: 1470px;
+height: 800px;
+}
+.res3{
+  color: #FFF;
+font-family: TT Firs Neue;
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.res4{
+  color: #FFF;
+text-align: center;
+font-family: TT Firs Neue;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.res4 button{
+  border-radius: 10px;
+border: 2px #EB5E57;
+background: #EB5E57;
+width: 232px;
+height: 70px;
+flex-shrink: 0;
+}
+
+.f1{
+  padding: 10px;
   margin-left: 45%;
   width: 70px;
   text-align: center;
@@ -153,7 +254,118 @@ button[type="submit"]:hover {
   
 }
 .container{
-  background-color: #61dafb;
+  background: #233671;
   margin: 30px;
-  padding:50px;
+  padding:200px;
+}
+.container h3{
+  color: #FFF;
+text-align: center;
+font-family: TT Firs Neue;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.container table{
+  text-align: center;
+ 
+  margin: auto;
+}
+
+#f11{
+  color: #EB5E57;
+font-family: TT Firs Neue Trial Var Roman;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+width: 135px;
+height: 34px;
+flex-shrink: 0;
+}
+#f12{
+  color: #FFF;
+text-align: center;
+font-family: TT Firs Neue Trial Var Roman;
+font-size: 20px;
+font-style: normal;
+font-weight: 100;
+line-height: 0%; /* 0px */
+}
+.f13 h3{
+  color: #EB5E57;
+font-family: TT Firs Neue Trial Var Roman;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.f13{
+  color: #FFF;
+font-family: TT Firs Neue;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.f14{
+  color: #FFF;
+  text-align: center;
+  font-family: TT Firs Neue Trial Var Roman;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#f114{
+  color: #4572E0;
+font-family: TT Firs Neue Trial Var Roman;
+font-size: 34px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.f15{
+  color: #FFF;
+  text-align: center;
+  font-family: TT Firs Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.t1{
+  background-image:url('./components/celebration.gif'); background-repeat:repeat; 
+}
+.t1 h1{
+  
+  color: #EB5E57;
+  text-align: center;
+  font-family: TT Firs Neue;
+  font-size: 69px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 107%; /* 73.83px */
+}
+.t2{
+  color: #2B4994;
+text-align: center;
+font-family: TT Firs Neue;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.t3{
+  color: #2B4994;
+text-align: center;
+font-family: TT Firs Neue;
+font-size: 54px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.t4{
+  
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-import currencypage from '../assets/currencypage.svg';
 import axios from 'axios';
 
 function customShuffleArray(array) {
@@ -44,12 +43,8 @@ function CurrencyForm() {
         </marquee>
     }
     return (
-        <div>
-            <h2>Select a valid currency</h2>
-            <div>{chunkArray(shuffledCurrencies, 20).map((words,index) => getMarqueeForWords(words, index))}
-            </div>
-            <div>
-                <image src="..assets/currencypage.svg"></image>
+        <div className='cf1'>
+            <div className='cf2'>{chunkArray(shuffledCurrencies, 20).map((words,index) => getMarqueeForWords(words, index))}
             </div>
         </div>
     );

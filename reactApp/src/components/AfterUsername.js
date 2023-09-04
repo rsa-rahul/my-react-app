@@ -8,9 +8,9 @@ function AfterUsername() {
       
       <div className='au1'>
       <img src={mygif}></img><br/>
-        <h2>Put your game face up and <br/>gear up<br/>for the challenge</h2>
+        <h2>Put your game face up and <br/><h2>gear up</h2>for the challenge</h2>
         <br/>
-        <Link to="/QuestionForm">Okay</Link>
+        <Link to="/QuestionForm"><h6>Okay</h6></Link>
       </div>
     </div>
   );
